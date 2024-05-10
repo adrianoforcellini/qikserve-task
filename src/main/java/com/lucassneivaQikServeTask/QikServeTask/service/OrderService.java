@@ -12,6 +12,4 @@ public interface OrderService {
     @Nonnull Iterable<Order> getAllOrders();
 
     Order create(@Nonnull() Order order);
-
-    void update(@Nonnull() Order order);
 }

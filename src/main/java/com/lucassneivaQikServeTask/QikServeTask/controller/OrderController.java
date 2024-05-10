@@ -41,13 +41,6 @@ public class OrderController {
         this.orderService = orderService;
         this.orderProductService = orderProductService;
     }
-   
-
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public @Nonnull Iterable<Order> list() {
-        return this.orderService.getAllOrders();
-    }
 
     @PostMapping
     public ResponseEntity<Order> create(@RequestBody OrderForm form) {
@@ -72,8 +65,6 @@ public class OrderController {
         double discount = order.getCurrencyDiscount(form.promoCode);
         order.setDiscountCurrency(discount);
         
-        this.orderService.update(order);
-
         String uri = ServletUriComponentsBuilder
           .fromCurrentServletMapping()
           .path("/orders/{id}")
