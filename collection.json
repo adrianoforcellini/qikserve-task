@@ -1,0 +1,158 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-05-10T23:38:39.009Z",
+  "__export_source": "insomnia.desktop.app:v9.0.0",
+  "resources": [
+    {
+      "_id": "req_84261a0437014320942ba924e3b330b7",
+      "parentId": "wrk_scratchpad",
+      "modified": 1715384031941,
+      "created": 1708444238460,
+      "url": "http://localhost:8080/api/products/add",
+      "name": "Add new product",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"PlayStation 5\",\n    \"price\": 600.0,\n    \"pictureUrl\": \"http://example.com/\"\n}"
+      },
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/8.6.1" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708444238460,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_scratchpad",
+      "parentId": null,
+      "modified": 1707246987320,
+      "created": 1707246987320,
+      "name": "Scratch Pad",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_ee7d05917f1b4017a378ff4b14d1d105",
+      "parentId": "wrk_scratchpad",
+      "modified": 1715384051407,
+      "created": 1715248387485,
+      "url": "http://localhost:8080/api/orders",
+      "name": "Create order",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"productOrders\": [\n        {\n            \"product\": {\n                \"id\": 1\n            },\n            \"quantity\": 2\n        },\n        {\n            \"product\": {\n                \"id\": 2\n            },\n            \"quantity\": 1\n        }\n    ],\n\t\"promoCode\": \"PROMO20\"\n}"
+      },
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/9.0.0" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1715248387485,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6f432a57aa1648e9848c5ca7267e788f",
+      "parentId": "wrk_scratchpad",
+      "modified": 1715384075326,
+      "created": 1715248510040,
+      "url": "http://localhost:8080/api/products/edit/8",
+      "name": "Edit product by id",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"price\": 500.0,\n    \"pictureUrl\": \"http://rrrrr.com/\"\n}"
+      },
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/9.0.0" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1715248510040,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4f6a8bce4f6649b1b30dfa3cdb7e6d4b",
+      "parentId": "wrk_scratchpad",
+      "modified": 1715384091758,
+      "created": 1715383083123,
+      "url": "http://localhost:8080/api/products",
+      "name": "Get all products",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/9.0.0" }],
+      "authentication": {},
+      "metaSortKey": -1715383083123,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_99d30891da4bdcebc63947a8fc17f076de878684",
+      "parentId": "wrk_scratchpad",
+      "modified": 1708444210595,
+      "created": 1708444210595,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1708444210595,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_99d30891da4bdcebc63947a8fc17f076de878684",
+      "parentId": "wrk_scratchpad",
+      "modified": 1708444210598,
+      "created": 1708444210598,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
