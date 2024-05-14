@@ -11,8 +11,8 @@ import com.lucassneivaQikServeTask.QikServeTask.exception.ResourceNotFoundExcept
 import com.lucassneivaQikServeTask.QikServeTask.model.Product;
 import com.lucassneivaQikServeTask.QikServeTask.service.ProductService;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+// import io.swagger.annotations.Api;
+// import io.swagger.annotations.ApiOperation;
 import jakarta.annotation.Nonnull;
 
 import java.lang.module.ResolutionException;
@@ -20,7 +20,7 @@ import java.lang.module.ResolutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Api(tags="Produtos")
+// @Api(tags="Produtos")
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -33,13 +33,13 @@ public class ProductController {
         this.productService = productService;
     }
     
-    @ApiOperation(value = "Obter um produto pelo ID", response = Product.class)
+// @ApiOperation(value = "Obter um produto pelo ID", response = Product.class)
     @GetMapping(value = { "", "/" })
     public @Nonnull Iterable<Product> getProducts() {
         return productService.getAllProducts();
     }
     
-    @ApiOperation(value = "Adicionar um novo produto")
+// @ApiOperation(value = "Adicionar um novo produto")
     @PostMapping("/add")
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
         Product newProduct = productService.save(product);
