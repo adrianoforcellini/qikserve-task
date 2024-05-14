@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.lucassneivaQikServeTask.QikServeTask.QikServeTaskApplicationTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.29 s -- in com.lucassneivaQikServeTask.QikServeTask.QikServeTaskApplicationTests
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.27 s -- in com.lucassneivaQikServeTask.QikServeTask.QikServeTaskApplicationTests
+>>>>>>> 1d9ea2033340b0f877b698e113e9dd34790b02d1

@@ -6,21 +6,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.lucassneivaQikServeTask.QikServeTask.exception.ResourceNotFoundException;
 import com.lucassneivaQikServeTask.QikServeTask.model.Product;
 import com.lucassneivaQikServeTask.QikServeTask.service.ProductService;
-
-// import io.swagger.annotations.Api;
-// import io.swagger.annotations.ApiOperation;
 import jakarta.annotation.Nonnull;
-
-import java.lang.module.ResolutionException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-// @Api(tags="Produtos")
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -33,7 +24,6 @@ public class ProductController {
         this.productService = productService;
     }
     
-// @ApiOperation(value = "Obter um produto pelo ID", response = Product.class)
     @GetMapping(value = { "", "/" })
     public @Nonnull Iterable<Product> getProducts() {
         return productService.getAllProducts();
